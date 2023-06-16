@@ -95,13 +95,14 @@ function parseProtoRoot(root, options, packageName) {
  * @param {OptionType=} _options
  * @returns
  */
-function parseProto(source, _options) {
+function parseProto(source, _options, parseOptions = { keepCase: false }) {
   const options = { ...defaultOptions, ..._options };
   const res = protobuf.parse(source, {
     alternateCommentMode: true,
     preferTrailingComment: true,
-    keepCase: true,
+    keepCase: parseOptions.keepCase,
   });
+
   return parseProtoRoot(res.root, options, res.package);
 }
 

@@ -116,3 +116,5 @@ pnpm-lock.yaml
 # lock files
 yarn.lock
 package-lock.json
+
+.idea

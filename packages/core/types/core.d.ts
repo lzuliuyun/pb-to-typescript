@@ -12,9 +12,10 @@ import { mockResponse } from './utils/mock.js';
  * parse protobuf text plain
  * @param {string} source
  * @param {OptionType=} _options
+ * @param parseOptions
  * @returns
  */
-export function parseProto(source: string, _options?: OptionType | undefined): string;
+export function parseProto(source: string, _options?: OptionType | undefined, parseOptions?: { keepCase: boolean }): string;
 /**
  * parse protobuf root object
  * @param {protobuf.Root} root

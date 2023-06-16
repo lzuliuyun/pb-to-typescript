@@ -153,6 +153,8 @@ textarea, pre {
 .tool-bar{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 textarea {
   flex: 1;
